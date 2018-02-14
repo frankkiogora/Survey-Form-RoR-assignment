@@ -1,0 +1,21 @@
+<h1>Surveys#result</h1>
+<p>Find me in app/views/surveys/result.html.erb</p>
+
+
+<h2>Results</h2>
+  <% if flash[:count]%>
+  <div>
+    <p>Thanks for submitting this form! You have submitted this form <%= flash[:count] %> times now.</p>
+  </div>
+  <% end %>
+<div>
+ 
+
+  User Name: <%= @user['name'] %><br>
+  User Location: <%= @user['location'] %><br>
+  User Language: <%= @user['language'] %><br>
+  User Comments: <%= @user['comments'] %><br><br>
+
+  <!-- <a href="<%=new_survey_path%>">Go Back</a> -->
+  <a href="/surveys/new"><input type='submit' value='Go Back'></a>
+</div>
